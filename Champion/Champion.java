@@ -9,7 +9,7 @@ public abstract class Champion {
     int defense;
 
     // 생성자
-    public Champion(String name, int hp, int attackDamage, int defense) {
+    public Champion(String name, int level, int hp, int attackDamage, int defense) {
         this.name = name;
         this.level = 1;
         this.hp = hp;
@@ -20,11 +20,11 @@ public abstract class Champion {
     // 기본공격
     public void basicAttack(Champion champion, Champion target){
         System.out.println(this.name + "의 기본 공격");
-        target.takeDamage(champion, this.attackDamage);
+        target.takeDamage(this.attackDamage);
     }
 
     // 데미지 받기
-    public void takeDamage(Champion champion, int damage){
+    public void takeDamage(int damage){
 
         int realDamage = damage - defense;
 
@@ -49,6 +49,9 @@ public abstract class Champion {
         defense += 50;
     }
 
+    public int getAttackDamage() {
+        return attackDamage;
+    }
 
     public abstract void leftHook(Champion champion, Champion target);
     public abstract void rightHook(Champion champion, Champion target);
