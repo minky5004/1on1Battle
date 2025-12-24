@@ -7,7 +7,6 @@ public abstract class Champion {
     int hp;
     int attackDamage;
     int defense;
-    boolean guardStance = false;
 
     // 생성자
     public Champion(String name, int level, int hp, int attackDamage, int defense) {
@@ -60,6 +59,5 @@ public abstract class Champion {
     public abstract void rightKick(Champion champion, Champion target);
     public abstract void combo(Champion champion, Champion target);
     public abstract void specialMove(Champion champion, Champion target);
-    public abstract void guard(Champion champion, Champion target);
 
 }

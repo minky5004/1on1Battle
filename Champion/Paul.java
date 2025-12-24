@@ -42,8 +42,4 @@ public class Paul extends Champion {
 
     }
 
-    @Override
-    public void guard(Champion champion, Champion target) {
-        this.guardStance = true;
-    }
 }
