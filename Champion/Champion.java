@@ -39,7 +39,7 @@ public abstract class Champion {
         hp = hp - realDamage;
 
         if (hp > 0){
-            System.out.println(name + "이" + realDamage + "의 피해를 받음. (남은 체력 : " + hp + ")");
+            System.out.println(name + "이 " + realDamage + "의 피해를 받음. (남은 체력 : " + hp + ")");
         } else if (hp < 0) {
             System.out.println(name + "이 죽음.");
         }

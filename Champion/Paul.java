@@ -40,7 +40,7 @@ public class Paul extends Champion {
 
     @Override
     public void combo(Champion champion, Champion target) {
-        System.out.println("Paul의 콤보");
+        System.out.println("Paul의 연속타격");
         target.takeDamage(champion.getAttackDamage());
         target.takeDamage(champion.getAttackDamage());
 
@@ -52,7 +52,7 @@ public class Paul extends Champion {
             System.out.println("Paul의 빅뱅 붕권!");
             target.takeDamage(champion.getAttackDamage() * 3);
         } else {
-            System.out.println("special Move 실패!");
+            System.out.println("Paul의 special Move 실패!");
         }
     }
 }
