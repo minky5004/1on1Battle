@@ -8,6 +8,8 @@ public abstract class Champion {
     int attackDamage;
     int defense;
 
+    public static int createdCount = 0;
+
     // 생성자
     public Champion(String name, int level, int hp, int attackDamage, int defense) {
         this.name = name;
@@ -15,6 +17,8 @@ public abstract class Champion {
         this.hp = hp;
         this.attackDamage = attackDamage;
         this.defense = defense;
+
+        createdCount++;
     }
 
     // 기본공격
@@ -53,11 +57,16 @@ public abstract class Champion {
         return attackDamage;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public abstract void leftHand(Champion champion, Champion target);
     public abstract void rightHand(Champion champion, Champion target);
     public abstract void leftKick(Champion champion, Champion target);
     public abstract void rightKick(Champion champion, Champion target);
     public abstract void combo(Champion champion, Champion target);
     public abstract void specialMove(Champion champion, Champion target);
+
 
 }
