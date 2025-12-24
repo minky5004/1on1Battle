@@ -7,15 +7,15 @@ public class Steve extends Champion {
     }
 
     @Override
-    public void leftHook(Champion champion, Champion target) {
+    public void leftHand(Champion champion, Champion target) {
         System.out.println("Steve의 LeftHook!");
-        target.takeDamage(champion.getAttackDamage()-10);
+        target.takeDamage(champion.getAttackDamage()+10);
     }
 
     @Override
-    public void rightHook(Champion champion, Champion target) {
+    public void rightHand(Champion champion, Champion target) {
         System.out.println("Steve의 RightHook!");
-        target.takeDamage(champion.getAttackDamage());
+        target.takeDamage(champion.getAttackDamage()+20);
     }
 
     @Override
@@ -33,5 +33,17 @@ public class Steve extends Champion {
         System.out.println("Steve의 콤보");
         target.takeDamage(champion.getAttackDamage()*2);
 
+    }
+
+    @Override
+    public void specialMove(Champion champion, Champion target) {
+        System.out.println("Steve의 뎀프시롤");
+        target.takeDamage(champion.getAttackDamage()*2);
+
+    }
+
+    @Override
+    public void guard(Champion champion, Champion target) {
+        this.guardStance = true;
     }
 }

@@ -7,6 +7,7 @@ public abstract class Champion {
     int hp;
     int attackDamage;
     int defense;
+    boolean guardStance = false;
 
     // 생성자
     public Champion(String name, int level, int hp, int attackDamage, int defense) {
@@ -53,10 +54,12 @@ public abstract class Champion {
         return attackDamage;
     }
 
-    public abstract void leftHook(Champion champion, Champion target);
-    public abstract void rightHook(Champion champion, Champion target);
+    public abstract void leftHand(Champion champion, Champion target);
+    public abstract void rightHand(Champion champion, Champion target);
     public abstract void leftKick(Champion champion, Champion target);
     public abstract void rightKick(Champion champion, Champion target);
     public abstract void combo(Champion champion, Champion target);
+    public abstract void specialMove(Champion champion, Champion target);
+    public abstract void guard(Champion champion, Champion target);
 
 }
